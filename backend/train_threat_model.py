@@ -28,7 +28,7 @@ def train_and_save_model():
         ("hello world", 0),
         ("john.doe@example.com", 0),
         ("Search for products in store", 0),
-        ("Welcome to AegisAPI Security Center", 0),
+        ("Welcome to AegisZero Security Center", 0),
         ("user_profile_data_123", 0),
         ("How to configure FastAPI with Next.js", 0),
         ("get_user_by_id?id=42", 0),

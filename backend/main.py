@@ -46,7 +46,7 @@ def load_artifacts():
     auth_model = joblib.load(auth_model_path)
     behavior_model = joblib.load(behavior_model_path)
     
-    print("[+] All 4 AegisAPI ML models (Payload, NIDS, Auth, and OneClassSVM Behavior) loaded into memory.")
+    print("[+] All 4 AegisZero ML models (Payload, NIDS, Auth, and OneClassSVM Behavior) loaded into memory.")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -54,7 +54,7 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="AegisAPI Security Inference Engine",
+    title="AegisZero Security Inference Engine",
     description="Full-suite ML Security Module (Payload Scanner, NIDS, Risk-Based Auth, System Behavior Anomaly Engine)",
     version="4.0.0",
     lifespan=lifespan
@@ -117,7 +117,7 @@ class BehaviorMetricsResponse(BaseModel):
 def read_root():
     return {
         "status": "online",
-        "service": "AegisAPI Security Engine",
+        "service": "AegisZero Security Engine",
         "modules": [
             "Payload Threat Scanner",
             "Network Intrusion Detection System (NIDS)",

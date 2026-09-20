@@ -1,15 +1,15 @@
-# 🛡️ AegisAPI: AI-Powered Security Operations Center
+# 🛡️ AegisZero: AI-Powered Security Operations Center
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3.2-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Evaluation_Ready-success?style=for-the-badge)
 
-AegisAPI is a modern, decoupled Artificial Intelligence application security module. It utilizes lightweight, high-performance machine learning models to analyze web traffic, detect intrusions, authenticate users via behavioral biometrics, and monitor systemic anomalies in real-time.
+AegisZero is a modern, decoupled Artificial Intelligence application security module. It utilizes lightweight, high-performance machine learning models to analyze web traffic, detect intrusions, authenticate users via behavioral biometrics, and monitor systemic anomalies in real-time.
 
 ## 🧠 Core Intelligence Modules
 
-AegisAPI replaces traditional, static rule-based firewalls with four dynamic ML models:
+AegisZero replaces traditional, static rule-based firewalls with four dynamic ML models:
 
 1. **Data Payload Inspector (Threat Detection):** Utilizes Natural Language Processing (NLP) and Logistic Regression to vectorize and classify incoming web requests, preventing SQL Injection (SQLi) and Cross-Site Scripting (XSS).
 2. **Network Activity Monitor (Intrusion Detection):** Employs a Random Forest Classifier to analyze tabular packet metadata (session duration, protocol, volume) to detect DDoS floods and port scanning.
@@ -115,4 +115,4 @@ npm run dev
 
 ## ☁️ Deployment Configuration
 
-AegisAPI is container-ready. The Next.js frontend is heavily optimized for zero-config edge deployment on Vercel. The FastAPI backend includes a `render.yaml` and `Procfile`, making it trivial to spin up the ML inference engine on Render or Railway, ensuring the Python worker environments stay isolated from the client-facing UI.
+AegisZero is container-ready. The Next.js frontend is heavily optimized for zero-config edge deployment on Vercel. The FastAPI backend includes a `render.yaml` and `Procfile`, making it trivial to spin up the ML inference engine on Render or Railway, ensuring the Python worker environments stay isolated from the client-facing UI.

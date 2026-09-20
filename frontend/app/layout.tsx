@@ -2,8 +2,8 @@ import './globals.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AegisAPI - Security Operations Center',
-  description: 'Real-Time AI-Powered Application Security & Payload Scanner',
+  title: 'AegisZero - Security Operations Center',
+  description: 'Real-Time AI-Powered Application Security & ML Payload Scanner',
 };
 
 export default function RootLayout({

@@ -338,11 +338,11 @@ export default function SOCDashboard() {
         initial="hidden"
         animate="visible"
       >
-        {/* Header */}
+        {/* Top Title Bar */}
         <motion.header variants={itemVariants} className="border-b border-slate-800/80 pb-4">
           <h1 className="text-2xl font-bold tracking-tight text-white flex items-center space-x-3">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              AegisAPI
+              AegisZero
             </span>
             <span className="text-slate-400 font-light">Security Operations Center</span>
           </h1>
