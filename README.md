@@ -22,26 +22,38 @@ AegisZero replaces traditional, static rule-based firewalls with four dynamic ML
 The system utilizes a decoupled architecture, separating the Next.js UI from the FastAPI machine learning inference engine.
 
 ```mermaid
-flowchart LR
+graph TD
+    %% Styling defining the dark/cyber aesthetic natively
     classDef frontend fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff;
     classDef backend fill:#1e293b,stroke:#8b5cf6,stroke-width:2px,color:#fff;
-    classDef model fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#f8fafc;
+    classDef model fill:#334155,stroke:#f59e0b,stroke-width:1px,color:#f8fafc;
 
-    Client([SOC Analyst]):::frontend -->|HTTPS| UI[Next.js Dashboard UI]:::frontend
-    UI -->|REST API| Gateway[FastAPI ML Engine]:::backend
+    %% Nodes
+    Client([SOC Analyst / Web Client]):::frontend
+    UI[Next.js Dashboard UI]:::frontend
+    Gateway{FastAPI ML Gateway}:::backend
+    
+    %% Models
+    M1[(NLP + Logistic Regression)]:::model
+    M2[(Random Forest Classifier)]:::model
+    M3[(Isolation Forest)]:::model
+    M4[(One-Class SVM)]:::model
 
-    subgraph Intelligence ["🧠 ML Security Intelligence Suite"]
-        direction TB
-        M1["Module 1: Payload Inspector<br/>(NLP + Logistic Regression)"]:::model
-        M2["Module 2: Network NIDS<br/>(Random Forest Classifier)"]:::model
-        M3["Module 3: Identity Gateway<br/>(Isolation Forest Anomaly)"]:::model
-        M4["Module 4: Behavior Engine<br/>(Unsupervised One-Class SVM)"]:::model
-    end
-
-    Gateway -->|Payload Text| M1
+    %% Data flow
+    Client -->|Interacts| UI
+    UI -->|REST / JSON| Gateway
+    
+    Gateway -->|String Payloads| M1
     Gateway -->|Packet Metadata| M2
     Gateway -->|Login Context| M3
     Gateway -->|Server Metrics| M4
+    
+    M1 -.-> Gateway
+    M2 -.-> Gateway
+    M3 -.-> Gateway
+    M4 -.-> Gateway
+    
+    Gateway -->|Aggregated JSON Response| UI
 ```
 
 ---
