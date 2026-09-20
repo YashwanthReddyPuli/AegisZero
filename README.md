@@ -3,7 +3,6 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3.2-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Evaluation_Ready-success?style=for-the-badge)
 
 AegisZero is a modern, decoupled Artificial Intelligence application security module. It utilizes lightweight, high-performance machine learning models to analyze web traffic, detect intrusions, authenticate users via behavioral biometrics, and monitor systemic anomalies in real-time.
 
